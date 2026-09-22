@@ -1,87 +1,65 @@
 Algoritmo "Avaliação II"
-
+/
 Var
-   // Seção de Declarações das variáveis
-   total,sapos,ratos,coelhos,n,i,qtd,opc:inteiro
-   percentualRatos,percentualCoelhos,percentualSapos:real
-   especie:caractere
-
+opc, codigo, alcool, gasolina, diesel: inteiro
 
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc.
+//dupla: Arthur Moraes e Deivid Wilian
 
-   //Dupla: Arthur Moraes e Deivid Wilian
 
-   escreval(" ======== EXERCÍCIO EXPERIÊNCIA ======== ")
-   escreval("")
+//Inicialização doscontadores de combustível
 
-   total <- 0
-   sapos <- 0
-   ratos <- 0
-   coelhos <- 0
-   opc <- 0
+opc <- 0
+alcool <- 0
+gasolina <- 0
+diesel <- 0
 
-   escreval (" ======== CONTAGEM DE ESPÉCIES ======== ")
-   escreval ("")
 
-   enquanto opc <> 3 faca
-      escreval (" ======== SISTEMA DE ESPÉCIES ======== ")
-      ESCREVAL ("")
-      escreval ("1- Quantidade de espécies              ")
-      escreval ("2- Relatório                           ")
-      escreval ("3- Sair do sistema                     ")
-      escreval (" ===================================== ")
-      escreval ("Escolha uma opção: ")
-      leia (opc)
+escreval
+escreval (" ======== ESCOLHA DE COMBUSTIVEL ========= ")
+escreval ("")
 
-      escolha opc
+// Leitura inicial do código informado pelo ultilizador
 
-      caso 1
+enquanto opc <> 4 faca
 
-         para i de 1 ate n faca
-            leia (qtd,especie)
+escreval (" ========= SISTEMA DE COMBUSTIVEL ======== ")
+escreval ("")
+escreval ("1- Alcool                                  ")
+escreval ("2- Gasolina                                ")
+escreval ("3- Diesel                                  ")
+escreval ("4- Encerrar sistema                        ")
+escreval (" ========================================= ")
+escreval ("Escolha uma opção: ")
+leia (opc)
 
-            total <- total + qtd
+escolha opc
 
-            escolha especie
 
-            caso "C"
-               coelhos <- coelhos + qtd
+//laço de repetição que executa enquanto o código for difente de 4 (fim)
+enquanto codigo <> 4 faca
+escolha codigo
 
-            caso "R"
-               ratos <- ratos + qtd
+caso 1
+alcool <- alcool + 1
 
-            caso "S"
-               sapos <- sapos + qtd
+caso 2
+gasolina <- gasolina + 1
+caso 3
+diesel <- diesel + 1
+fimescolha
 
-            fimescolha
-         fimpara
 
-      caso 2
+fimenquanto
 
-         percentualCoelhos <- (coelhos * 100) / total
-         percentualRatos <- (retos * 100) / total
-         percentualRatos <- (sapos * 100) / total
+//Exibição dos resultados finais
 
-         escreval("Total: ",total)
-         escreval("Total de coelhos: ", coelhos)
-         escreval("Total de ratos: ",ratos)
-         escreval("Total de sapos: ",sapos)
+escreval("Alcool: ", alcool)
+escreval("Gasolina: ", gasolina)
+escreval("Diesel: ", diesel)
+escreval ("===========================")
+escreval ("====== MUITO OBRIGADO======")
+escreval ("===========================")
 
-         escreval("Percentual de coelhos: ",percentualCoelhos)
-         escreval("Percentual de ratos: ",percentualRatos)
-         escreval("Percentual de sapos: ",percentualSapos)
 
-      caso 3
-         escreval ("Encerrando sistema..... ")
-
-      outrocaso
-         escreval ("Opção Inválida!")
-         escreval ("Escolha uma opção entre 1 e 3")
-
-      fimescolha
-   fimenquanto
-
-   escreval(" =================== ")
-   escreval("  SISTEMA ENCERRADO  ")
 Fimalgoritmo
